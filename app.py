@@ -4,7 +4,7 @@ import pickle
 
 # create app and load the trained Model
 app = Flask(__name__)
-model = pickle.load(open('Trained_Model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 # Route to handle HOME
 @app.route('/')
