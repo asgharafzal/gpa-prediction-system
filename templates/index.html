@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+    <div>
+        <h1 class="center">GPA Prediction System</h1>
+    </div>
+
+    <div class="row">
+        <form action='/predict' method="post" class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">assignment</i>
+                    <input id="matric_marks" type="text" name="matric_marks" class="validate">
+                    <label for="matric_marks">Matric Marks</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">assignment</i>
+                    <input id="fsc_marks" type="text" name="fsc_marks" class="validate">
+                    <label for="fsc_marks">FSc Marks</label>
+                </div>
+            </div>
+
+            <div class="row center">
+
+                <button type="submit" class="btn-large waves-effect waves-light blue">Predict GPA</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="center"> 
+        
+
+        <br>{{pred}}<br>
+
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--    <script type="text/javascript" src="js/materialize.min.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+
+</html>
